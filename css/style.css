@@ -47,6 +47,13 @@ body {
     background-color: #F4EFED;
 }
 
+@media screen and (max-width: 880px) {
+
+    body {
+        font-size: 1em;
+    }
+}
+
 body::-webkit-scrollbar {
     width: 20px;
 }
@@ -131,7 +138,8 @@ header div h1 {
 
     /* ???????????????? */
     header div h1 {
-        font-size: 1em;
+        font-size: 0.75em;
+        margin-left: 10%;
     }
 }
 
@@ -181,6 +189,15 @@ header div p {
     opacity: 1;
 }
 
+@media screen and (max-width: 980px) {
+
+    .btn-CTA {
+        margin-top: 5px;
+        padding: 15px;
+        font-size: 1em;
+    }
+}
+
 /*---------------------------*\
             SECTIONS
 \*---------------------------*/
@@ -188,6 +205,16 @@ header,
 article,
 footer {
     margin: 1% 5%;
+}
+
+@media screen and (max-width: 980px) {
+
+    header,
+    article,
+    footer {
+        margin: 1% 2%;
+    }
+
 }
 
 .presentation-div,
@@ -237,6 +264,17 @@ h3 {
     font-weight: bold;
 }
 
+@media screen and (max-width: 980px) {
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .titre-degrade {
+        font-size: 2em;
+    }
+}
+
 /* titre deroulant continu */
 
 .marquee {
@@ -282,6 +320,14 @@ PARTIE 1 : PRESENTATION
     width: 70%;
 }
 
+@media screen and (max-width: 980px) {
+
+    .presentation-div {
+        width: 90%;
+        justify-content: end;
+    }
+}
+
 .ligne {
     text-decoration: underline;
 }
@@ -308,6 +354,16 @@ PARTIE 1 : PRESENTATION
     flex-direction: column;
     align-items: center;
     justify-content: end;
+}
+
+@media screen and (max-width: 980px) {
+    .presentation-metier {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: end;
+    }
 }
 
 .presentation-metier p {
