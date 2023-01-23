@@ -488,56 +488,6 @@ div.speaker-div div.overlay div {
 }
 
 /*---------------------------*\
-PARTIE 3 : AU PROGRAMME 
-\*---------------------------*/
-.fond-programme {
-    z-index: -2;
-    width: 100%;
-    position: absolute;
-    margin: 0;
-}
-
-div.programme-div {
-    width: 100%;
-}
-
-.programme-div h2 {
-    padding-top: 20px;
-    color: white;
-}
-
-.programme-div h3 {
-    color: white;
-}
-
-.programme-div p {
-    font-size: 2.25em;
-    color: white;
-}
-
-.programme-div .horraire-left {
-    display: flex;
-    padding-left: 40%;
-    justify-content: start;
-    flex-direction: column;
-    text-align: start;
-}
-
-.programme-div .horraire-right {
-    display: flex;
-    padding-right: 40%;
-    justify-content: end;
-    flex-direction: column;
-    text-align: right;
-}
-
-
-div.programme-div img {
-    background-image: url("../img/starwhite.svg");
-}
-
-
-/*---------------------------*\
 PARTIE 3 : EVENEMENT
 \*---------------------------*/
 
@@ -575,6 +525,25 @@ PARTIE 5 : AGENCE
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 980px) {
+
+    .grenadine-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grenadine-div-texte {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 1%;
+    }
+
+    .grenadine-div-texte p {
+        width: 100%;
+    }
 }
 
 /*---------------------------*\
@@ -620,6 +589,13 @@ footer .footer2-div .logo-departement {
 .footer2-div .logo-departement img {
     width: 15%;
     padding: 30px;
+}
+
+@media screen and (max-width: 980px) {
+    .footer2-div .logo-departement img {
+        width: 25%;
+        padding: 10px;
+    }
 }
 
 .copyright {
