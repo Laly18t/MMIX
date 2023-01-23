@@ -1,0 +1,583 @@
+/* Reset css */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+@font-face {
+    font-family: "Mada";
+    src: url(../font/Mada-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Mada-Bold";
+    src: url(../font/Mada-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Segoe";
+    src: url(../font/segoesc.ttf);
+}
+
+
+/*---------------------------*\
+GENERAL
+\*---------------------------*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Mada";
+    scrollbar-color: rgb(230, 230, 230);
+    scrollbar-width: thin;
+    display: flex;
+    font-size: 1.5em;
+    flex-direction: column;
+    max-width: 100%;
+    font-family: "Mada";
+    background-color: #F4EFED;
+}
+
+body::-webkit-scrollbar {
+    width: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #333399;
+    /* #FF005C */
+    /* #F18728 */
+    border: 3px solid #F4EFED;
+    border-radius: 10px;
+}
+
+/*---------------------------*\
+NAVIGATION
+\*---------------------------*/
+
+header nav {
+    position: fixed;
+    z-index: 3;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav a img.logo {
+    display: flex;
+    justify-content: start;
+    width: 50%;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav div a:nth-child(1) {
+    margin-right: 2.5em;
+}
+
+nav div a {
+    transition: 400ms;
+}
+
+nav div a:hover {
+    border-bottom: 2px solid #ff00CC;
+    transform: translate(1%, 5%)
+}
+
+/*---------------------------*\
+            HEADER
+\*---------------------------*/
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+/*modifier l'image*/
+header div img {
+    z-index: -1;
+    position: relative;
+}
+
+/*phrase d'accroche */
+header div h1 {
+    z-index: 1;
+    max-width: 100%;
+    font-size: 1.5em;
+    position: absolute;
+    margin-top: -10%;
+    margin-left: 20%;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 980px) {
+
+    /* ???????????????? */
+    header div h1 {
+        font-size: 1em;
+    }
+}
+
+/*boutton 'curieux?' */
+header div p {
+    margin: -3% 5% 0 0;
+    text-align: end;
+}
+
+/* Call To Action */
+.btn-CTA {
+    margin-top: 30px;
+    color: white;
+    background: linear-gradient(111.54deg, #ff00CC 0%, #333399 100%);
+    border-radius: 80px;
+    padding: 15px 25px;
+    text-align: center;
+    transition: 0.4s ease;
+    font-size: 1.5em;
+    opacity: 0.6;
+    position: relative;
+}
+
+.btn-CTA:hover {
+    opacity: 1;
+    background: linear-gradient(111.54deg, #333399 0%, #ff00CC 100%);
+}
+
+.btn-CTA::after {
+    height: 110%;
+    width: 105%;
+    position: absolute;
+    transition: 0.4s ease;
+    opacity: 0;
+    margin-bottom: 5px;
+    margin-left: 3px;
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-radius: 80px;
+    border: 2px solid black;
+    transform: translate(10%, 5%)
+}
+
+.btn-CTA:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+/*---------------------------*\
+            SECTIONS
+\*---------------------------*/
+header,
+article,
+footer {
+    margin: 1% 5%;
+}
+
+.presentation-div,
+.speaker-div,
+.programme-div,
+.decouvrir-div,
+.grenadine-div {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.acroche {
+    text-align: center;
+}
+
+.decouvrir-div,
+.acroche {
+    padding-top: 50px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    text-align: end;
+}
+
+h2 {
+    font-size: 4.375em;
+}
+
+/* etoile des h2 */
+h2 img.etoiles {
+    width: 20px;
+    margin: 0 0 35px 5px;
+}
+
+.titre-degrade {
+    background: linear-gradient(45deg, #ff00CC, #333399);
+    font-size: 6.5em;
+    opacity: 0.5;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+/* titre deroulant continu */
+
+.marquee {
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: #ccc;
+}
+
+.ticker-title {
+    color: #ff00CC;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    font-size: 3em;
+    text-transform: uppercase;
+    border: 2px solid #ff00CC;
+    transform: matrix(1, -0.03, -0.03, 1, 0, 0);
+}
+
+.ticker-title>* {
+    display: inline-block;
+    color: #ff00CC;
+    margin-right: 20px;
+    letter-spacing: 0.095em;
+    animation: title 20s infinite linear;
+}
+
+@keyframes title {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1100px);
+    }
+}
+
+/*---------------------------*\
+PARTIE 1 : PRESENTATION
+\*---------------------------*/
+.presentation-div {
+    width: 70%;
+}
+
+.ligne {
+    text-decoration: underline;
+}
+
+.cercle {
+    position: absolute;
+    width: 65%;
+    z-index: -1;
+    left: 0;
+    margin: 0;
+}
+
+.presentation-div h2 {
+    text-align: end;
+}
+
+.presentation-div p {
+    margin-bottom: 10px;
+}
+
+.presentation-metier {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.presentation-metier p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+span.italic {
+    font-family: "Segoe";
+    font-weight: bold;
+}
+
+div.presentation-div p span.gros {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+section div.presentation-div img.cerclemmix {
+    background-image: url("../img/cercle_mmix.svg");
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+/*---------------------------*\
+PARTIE 1 : PRESENTATION SUITE : nous trouver
+\*---------------------------*/
+.carte {
+    width: 40%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+div.presentation-carte {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+div.presentation-carte ul {
+    padding-left: 5px;
+}
+
+div.presentation-carte ul li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+div.presentation-carte ul li img {
+    width: 5%;
+    margin-right: 15px;
+}
+
+
+/*---------------------------*\
+PARTIE 2 : SPEAKER
+\*---------------------------*/
+div.speaker-div div.conteneur {
+    position: relative;
+}
+
+.speaker-scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    padding: 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.speaker-scroller::-webkit-scrollbar {
+    width: 1em;
+    border: none;
+}
+
+.speaker-scroller::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff00CC, #333399);
+    /* #FF005C */
+    /* #F18728 */
+    border-radius: 30px;
+}
+
+.speaker-element {
+    position: relative;
+    display: grid;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.speaker-element>img {
+    background: linear-gradient(45deg, #ff00CC, #333399);
+    padding: 5px;
+    inline-size: 60%;
+    object-fit: cover;
+}
+
+div.speaker-div div.speaker-element div.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: black;
+    border-radius: 20px;
+    flex-direction: column;
+    width: 100%;
+    opacity: 0;
+    transition: 500ms ease;
+    background-color: white;
+    align-items: center;
+}
+
+div.speaker-div div.speaker-element:hover div.overlay {
+    opacity: 0.85;
+}
+
+div.speaker-div div.overlay div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*---------------------------*\
+PARTIE 3 : AU PROGRAMME 
+\*---------------------------*/
+.fond-programme {
+    z-index: -2;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+}
+
+div.programme-div {
+    width: 100%;
+}
+
+.programme-div h2 {
+    padding-top: 20px;
+    color: white;
+}
+
+.programme-div h3 {
+    color: white;
+}
+
+.programme-div p {
+    font-size: 2.25em;
+    color: white;
+}
+
+.programme-div .horraire-left {
+    display: flex;
+    padding-left: 40%;
+    justify-content: start;
+    flex-direction: column;
+    text-align: start;
+}
+
+.programme-div .horraire-right {
+    display: flex;
+    padding-right: 40%;
+    justify-content: end;
+    flex-direction: column;
+    text-align: right;
+}
+
+
+div.programme-div img {
+    background-image: url("../img/starwhite.svg");
+}
+
+
+/*---------------------------*\
+PARTIE 3 : EVENEMENT
+\*---------------------------*/
+
+/* partie découvrir */
+.decouvrir-div {
+    align-items: flex-start;
+}
+
+.decouvrir-div h3 {
+    width: 100%;
+    text-align: end;
+}
+
+/*---------------------------*\
+PARTIE 5 : AGENCE
+\*---------------------------*/
+.grenadine-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.grenadine-div-texte {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 1%;
+}
+
+.grenadine-div-texte p {
+    width: 60%;
+}
+
+.quisommesnous {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/*---------------------------*\
+PARTIE 6 : FOOTER
+\*---------------------------*/
+
+footer {
+    margin-top: 100px;
+}
+
+footer div.reseaux-div {
+    border: 1px solid #CEC9C9;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer1-div {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.footer1-div>article {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+footer .footer2-div .logo-departement {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.footer2-div .logo-departement img {
+    width: 15%;
+    padding: 30px;
+}
+
+.copyright {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.copyright a {
+    color: black;
+    text-decoration: underline 1px;
+}
+
+.copyright a:hover {
+    color: #ff00CC;
+    text-decoration: none;
+}
