@@ -260,6 +260,18 @@ footer {
     align-items: center;
 }
 
+@media screen and (max-width: 1080px) {
+
+    .presentation-div,
+    .speaker-div,
+    .programme-div,
+    .decouvrir-div,
+    .grenadine-div {
+        margin-top: 5%;
+    }
+
+}
+
 @media screen and (max-width: 480px) {
 
     header,
@@ -273,7 +285,7 @@ footer {
     .programme-div,
     .decouvrir-div,
     .grenadine-div {
-        margin-top: 5%;
+        margin-top: 3%;
     }
 
 }
@@ -320,14 +332,25 @@ h3 {
     font-weight: bold;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1080px) {
 
     h2 {
-        font-size: 2em;
+        font-size: 5em;
     }
 
     .titre-degrade {
-        font-size: 2em;
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width: 880px) {
+
+    h2 {
+        font-size: 3em;
+    }
+
+    .titre-degrade {
+        font-size: 3em;
     }
 }
 
@@ -479,6 +502,7 @@ PARTIE 1 : PRESENTATION SUITE : nous trouver
 \*---------------------------*/
 .carte {
     margin-right: 10px;
+    max-width: 90%;
 }
 
 div.presentation-carte {
@@ -489,9 +513,9 @@ div.presentation-carte {
 }
 
 div.presentation-carte>p {
-    top: -50px;
-    left: -20px;
-    z-index: 100;
+    top: -90px;
+    left: -40px;
+    z-index: 1;
     display: flex;
     justify-content: center;
 }
@@ -499,15 +523,40 @@ div.presentation-carte>p {
 div.presentation-carte ul li {
     display: flex;
     align-items: center;
+    text-align: left;
     margin: 20px 0;
 }
 
 div.presentation-carte ul li img {
-    width: 5%;
+    width: 10%;
     margin-right: 15px;
 }
 
+@media screen and (max-width: 980px) {
+    div.presentation-carte>p {
+        top: -60px;
+        left: -5px;
+    }
+
+    div.presentation-carte {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    div.presentation-carte>p {
+        top: -20px;
+        left: -5px;
+    }
+}
+
 @media screen and (max-width: 480px) {
+    div.presentation-carte>p {
+        top: 10px;
+        left: -5px;
+    }
+
     div.presentation-carte {
         display: flex;
         flex-direction: row;
@@ -627,7 +676,7 @@ PARTIE 5 : AGENCE
     justify-content: space-between;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1080px) {
 
     .grenadine-div {
         display: flex;
@@ -656,7 +705,7 @@ footer {
 
 footer div.reseaux-div {
     border: 1px solid #CEC9C9;
-    padding: 30px 20px;
+    padding: 10px 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -692,8 +741,12 @@ footer .footer2-div .logo-departement {
 }
 
 @media screen and (max-width: 980px) {
+    footer div.reseaux-div img {
+        width: 50%;
+    }
+
     .footer2-div .logo-departement img {
-        width: 25%;
+        width: 15%;
         padding: 10px;
     }
 }
