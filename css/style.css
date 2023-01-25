@@ -124,7 +124,7 @@ nav div a:nth-child(1) {
 }
 
 nav div a {
-    transition: 400ms;
+    transition: 50ms;
     color: black;
 }
 
