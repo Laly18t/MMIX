@@ -126,10 +126,12 @@ nav div a:nth-child(1) {
 
 nav div a {
     transition: 400ms;
+    color: black;
 }
 
 nav div a:hover {
     border-bottom: 2px solid #ff00CC;
+    color: #333399;
 }
 
 /*---------------------------*\
@@ -158,29 +160,10 @@ header div h1 {
     font-weight: normal;
 }
 
-@media screen and (max-width: 480px) {
-    header div h1 {
-        font-size: 15px;
-    }
-
-    .acroche p {
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .acroche p a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
 
 .acroche p {
-    height: 200px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
@@ -230,6 +213,24 @@ header div h1 {
 .btn-CTA:hover:after {
     transform: translate(0, 0);
     opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+    header div h1 {
+        font-size: 15px;
+    }
+
+    .acroche p {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .acroche p a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -395,16 +396,17 @@ PARTIE 1 : PRESENTATION
 }
 
 .presentation-metier {
-    width: 70%;
+    width: 100%;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: end;
+    align-items: flex-end;
 }
 
 @media screen and (max-width: 480px) {
     .presentation-metier {
         width: 100%;
+        padding-left: 0;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -439,9 +441,28 @@ section div.presentation-div img.cerclemmix {
 PARTIE 1 : PRESENTATION SUITE : nous trouver
 \*---------------------------*/
 .carte {
-    width: 40%;
-    object-fit: cover;
     margin-right: 10px;
+}
+
+div.presentation-carte {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+div.presentation-carte ul {
+    padding-left: 5px;
+}
+
+div.presentation-carte ul li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+div.presentation-carte ul li img {
+    width: 5%;
+    margin-right: 15px;
 }
 
 @media screen and (max-width: 480px) {
@@ -461,28 +482,6 @@ PARTIE 1 : PRESENTATION SUITE : nous trouver
         width: 80%;
     }
 }
-
-div.presentation-carte {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
-div.presentation-carte ul {
-    padding-left: 5px;
-}
-
-div.presentation-carte ul li {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-
-div.presentation-carte ul li img {
-    width: 5%;
-    margin-right: 15px;
-}
-
 
 /*---------------------------*\
 PARTIE 2 : SPEAKER
@@ -524,32 +523,29 @@ div.speaker-div div.conteneur {
     padding: 5px;
     inline-size: 60%;
     object-fit: cover;
+    position: relative;
 }
 
-div.speaker-div div.speaker-element div.overlay {
+div.speaker-div div.speaker-element>div {
     position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
-    color: black;
-    border-radius: 20px;
-    flex-direction: column;
-    width: 100%;
-    opacity: 0;
-    transition: 500ms ease;
-    background-color: white;
-    align-items: center;
-}
-
-div.speaker-div div.speaker-element:hover div.overlay {
-    opacity: 0.85;
-}
-
-div.speaker-div div.overlay div {
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 500ms ease;
+    background-color: white;
 }
+
+div.speaker-div div.speaker-element>div:hover {
+    opacity: 0.85;
+    display: flex;
+}
+
 
 /*---------------------------*\
 PARTIE 3 : EVENEMENT
