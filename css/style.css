@@ -8,7 +8,6 @@
     border: 0;
     text-decoration: none;
     list-style: none;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -176,11 +175,11 @@ header div h1 {
 
 /* Call To Action */
 .btn-CTA {
-    margin-top: 30px;
+    margin-top: 10px;
     color: white;
     background: linear-gradient(111.54deg, #ff00CC 0%, #333399 100%);
     border-radius: 80px;
-    padding: 15px 25px;
+    padding: 15px 20px;
     text-align: center;
     transition: 0.4s ease;
     font-size: 1.5em;
@@ -231,11 +230,9 @@ header div h1 {
         justify-content: center;
         align-items: center;
     }
-}
-
-@media screen and (max-width: 480px) {
 
     .btn-CTA {
+        margin-top: 30px;
         padding: 10px;
         font-size: 15px;
     }
@@ -250,15 +247,6 @@ footer {
     margin: 1% 5%;
 }
 
-@media screen and (max-width: 480px) {
-
-    header,
-    article,
-    footer {
-        margin: 1% 2%;
-    }
-
-}
 
 .presentation-div,
 .speaker-div,
@@ -270,6 +258,24 @@ footer {
     flex-direction: column;
     justify-self: center;
     align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+
+    header,
+    article,
+    footer {
+        margin: 1% 2%;
+    }
+
+    .presentation-div,
+    .speaker-div,
+    .programme-div,
+    .decouvrir-div,
+    .grenadine-div {
+        margin-top: 5%;
+    }
+
 }
 
 .acroche {
@@ -302,6 +308,9 @@ h2 img.etoiles {
     background: linear-gradient(45deg, #ff00CC, #333399);
     font-size: 6.5em;
     opacity: 0.5;
+    position: absolute;
+    z-index: -2;
+    top: -15px;
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -363,9 +372,24 @@ h3 {
 /*---------------------------*\
 PARTIE 1 : PRESENTATION
 \*---------------------------*/
-.presentation-div {
+#presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.presentation-lieu {
+    position: relative;
+    padding: 150px 0 100px 0;
+    overflow: hidden;
+    font-size: 2em;
     width: 70%;
 }
+
+.presentation-lieu p.titre-degrade {
+    top: -10px;
+}
+
 
 @media screen and (max-width: 980px) {
 
@@ -373,10 +397,25 @@ PARTIE 1 : PRESENTATION
         width: 90%;
         justify-content: end;
     }
+
+    .presentation-lieu {
+        position: relative;
+        padding: 50px 0;
+        font-size: 1em;
+    }
+
+    .presentation-lieu p.titre-degrade {
+        right: 0;
+    }
 }
 
 .ligne {
     text-decoration: underline;
+    color: #333399;
+}
+
+.ligne a {
+    color: #333399;
 }
 
 .cercle {
@@ -384,6 +423,7 @@ PARTIE 1 : PRESENTATION
     width: 65%;
     z-index: -1;
     left: 0;
+    top: 400px;
     margin: 0;
 }
 
@@ -396,11 +436,8 @@ PARTIE 1 : PRESENTATION
 }
 
 .presentation-metier {
-    width: 100%;
+    width: 70%;
     padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
 }
 
 @media screen and (max-width: 480px) {
@@ -446,12 +483,17 @@ PARTIE 1 : PRESENTATION SUITE : nous trouver
 
 div.presentation-carte {
     display: flex;
-    width: 100%;
     flex-direction: row;
+    position: relative;
+    align-items: center;
 }
 
-div.presentation-carte ul {
-    padding-left: 5px;
+div.presentation-carte>p {
+    top: -50px;
+    left: -20px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
 }
 
 div.presentation-carte ul li {
@@ -486,12 +528,10 @@ div.presentation-carte ul li img {
 /*---------------------------*\
 PARTIE 2 : SPEAKER
 \*---------------------------*/
-div.speaker-div div.conteneur {
-    position: relative;
-}
 
 .speaker-scroller {
     display: grid;
+    width: 80%;
     grid-auto-flow: column;
     grid-auto-columns: 40%;
     padding: 0;
@@ -506,8 +546,6 @@ div.speaker-div div.conteneur {
 
 .speaker-scroller::-webkit-scrollbar-thumb {
     background: linear-gradient(45deg, #ff00CC, #333399);
-    /* #FF005C */
-    /* #F18728 */
     border-radius: 30px;
 }
 
@@ -521,7 +559,7 @@ div.speaker-div div.conteneur {
 .speaker-element>img {
     background: linear-gradient(45deg, #ff00CC, #333399);
     padding: 5px;
-    inline-size: 60%;
+    inline-size: 70%;
     object-fit: cover;
     position: relative;
 }
@@ -529,7 +567,7 @@ div.speaker-div div.conteneur {
 div.speaker-div div.speaker-element>div {
     position: absolute;
     height: 100%;
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -554,6 +592,7 @@ PARTIE 3 : EVENEMENT
 /* partie découvrir */
 .decouvrir-div {
     align-items: flex-start;
+    position: relative;
 }
 
 .decouvrir-div h3 {
@@ -568,6 +607,7 @@ PARTIE 5 : AGENCE
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    position: relative;
 }
 
 .grenadine-div-texte {
