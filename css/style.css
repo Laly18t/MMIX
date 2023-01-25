@@ -651,17 +651,29 @@ PARTIE 3 : EVENEMENT
 
 .decouvrir-div-elements>img {
     max-width: 50%;
+    object-fit: cover;
 }
 
 .decouvrir-div h3 {
     top: 100px;
     z-index: 1;
     right: 0;
+    font-size: 5.5em;
+}
+
+.storytelling {
+    margin-top: 130px;
+    padding-left: 10px;
 }
 
 @media screen and (max-width: 980px) {
+    .storytelling {
+        margin-top: 50px;
+    }
+
     .decouvrir-div h3 {
-        top: 300px;
+        top: 350px;
+        font-size: 3em;
     }
 
     .decouvrir-div-elements {
@@ -673,24 +685,40 @@ PARTIE 3 : EVENEMENT
 
 @media screen and (max-width: 780px) {
     .decouvrir-div h3 {
-        top: 200px;
+        top: 280px;
+        font-size: 2em;
+    }
+
+    .storytelling {
+        margin-top: 30px;
     }
 }
 
 @media screen and (max-width: 580px) {
     .decouvrir-div h3 {
-        top: 100px;
+        top: 200px;
     }
 }
 
 /*---------------------------*\
 PARTIE 5 : AGENCE
 \*---------------------------*/
+#quisommesnous {
+    margin-top: 5%;
+    text-align: center;
+}
+
 .grenadine-div {
+    margin-top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: relative;
+}
+
+.grenadine-div h2 {
+    top: -80px;
+    right: 0;
 }
 
 .grenadine-div-texte {
@@ -704,13 +732,10 @@ PARTIE 5 : AGENCE
     width: 60%;
 }
 
-.quisommesnous {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
 @media screen and (max-width: 1080px) {
+    .grenadine-div h2 {
+        top: -30px;
+    }
 
     .grenadine-div {
         display: flex;
