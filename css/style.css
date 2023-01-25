@@ -644,9 +644,43 @@ PARTIE 3 : EVENEMENT
     position: relative;
 }
 
+.decouvrir-div-elements {
+    display: flex;
+    flex-direction: row;
+}
+
+.decouvrir-div-elements>img {
+    max-width: 50%;
+}
+
 .decouvrir-div h3 {
-    width: 100%;
-    text-align: end;
+    top: 100px;
+    z-index: 1;
+    right: 0;
+}
+
+@media screen and (max-width: 980px) {
+    .decouvrir-div h3 {
+        top: 300px;
+    }
+
+    .decouvrir-div-elements {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .decouvrir-div h3 {
+        top: 200px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .decouvrir-div h3 {
+        top: 100px;
+    }
 }
 
 /*---------------------------*\
