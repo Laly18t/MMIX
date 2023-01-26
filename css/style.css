@@ -319,7 +319,8 @@ h2 img.etoiles {
 .titre-degrade {
     background: linear-gradient(45deg, #ff00CC, #333399);
     font-size: 6.5em;
-    opacity: 0.5;
+    opacity: 0.65;
+    font-weight: bold;
     position: absolute;
     z-index: -2;
     top: -15px;
@@ -716,20 +717,31 @@ PARTIE 5 : AGENCE
     position: relative;
 }
 
+.grenadine-div img {
+    max-width: 80%;
+    width: 50%;
+    z-index: -1;
+    background: linear-gradient(45deg, #ff00CC, #333399);
+    padding: 2px;
+    border-radius: 15px;
+}
+
 .grenadine-div h2 {
     top: -80px;
-    right: 0;
+    right: 40px;
+    z-index: 1;
 }
 
 .grenadine-div-texte {
     display: flex;
+    text-align: left;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     margin: 1%;
 }
 
 .grenadine-div-texte p {
-    width: 60%;
+    width: 80%;
 }
 
 @media screen and (max-width: 1080px) {
@@ -751,6 +763,10 @@ PARTIE 5 : AGENCE
 
     .grenadine-div-texte p {
         width: 100%;
+    }
+
+    .grenadine-div img {
+        width: 80%;
     }
 }
 
