@@ -302,7 +302,6 @@ footer {
     text-align: center;
 }
 
-.decouvrir-div,
 .acroche {
     padding-top: 50px;
 }
@@ -370,15 +369,13 @@ h3 {
 .ticker-title2,
 .ticker-title3 {
     margin-top: 100px;
-    color: #ff00CC;
+    color: ;
     display: flex;
     width: 99%;
     flex-direction: row;
     overflow: hidden;
     font-size: 3em;
     text-transform: uppercase;
-    border-bottom: 2px solid #ff00CC;
-    border-top: 2px solid #ff00CC;
     transform: matrix(1, -0.05, -0.05, 1, 0, 0);
 }
 
@@ -391,35 +388,38 @@ h3 {
     }
 }
 
-.ticker-title1 {
-    color: #333399;
-    border-bottom: 2px solid #333399;
-    border-top: 2px solid #333399;
-}
-
-.ticker-title3 {
-    color: #7c318d;
-    border-bottom: 2px solid #7c318d;
-    border-top: 2px solid #7c318d;
-}
-
 .ticker-title1>*,
 .ticker-title2>*,
 .ticker-title3>* {
     display: inline-block;
-    color: #ff00CC;
+    color: #F4EFED;
+    text-shadow:
+        -1px -1px 0 #ff00CC,
+        1px -1px 0 #ff00CC,
+        -1px 1px 0 #ff00CC,
+        1px 1px 0 #ff00CC;
     margin-right: 19px;
     letter-spacing: 0.095em;
     animation: title 20s infinite linear;
 }
 
 .ticker-title1>* {
-    color: #333399;
+    text-shadow:
+        -1px -1px 0 #333399,
+        1px -1px 0 #333399,
+        -1px 1px 0 #333399,
+        1px 1px 0 #333399;
 }
 
 .ticker-title3>* {
-    color: #7c318d;
+    text-shadow:
+        -1px -1px 0 #7c318d,
+        1px -1px 0 #7c318d,
+        -1px 1px 0 #7c318d,
+        1px 1px 0 #7c318d;
 }
+
+.ticker-title1 span {}
 
 @keyframes title {
     0% {
@@ -694,7 +694,7 @@ PARTIE 3 : EVENEMENT
 }
 
 .decouvrir-div h3 {
-    top: 100px;
+    top: 60px;
     z-index: 1;
     right: 0;
     font-size: 5.5em;
@@ -711,7 +711,7 @@ PARTIE 3 : EVENEMENT
     }
 
     .decouvrir-div h3 {
-        top: 350px;
+        top: 300px;
         font-size: 3em;
     }
 
