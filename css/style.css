@@ -701,6 +701,7 @@ PARTIE 3 : EVENEMENT
 .storytelling {
     margin-top: 130px;
     padding-left: 10px;
+    margin-left: 15px;
 }
 
 @media screen and (max-width: 980px) {
@@ -778,6 +779,10 @@ PARTIE 5 : AGENCE
 
 .grenadine-div-texte p {
     width: 80%;
+}
+
+.agence {
+    margin-left: 15px;
 }
 
 @media screen and (max-width: 1080px) {
