@@ -621,6 +621,7 @@ PARTIE 2 : SPEAKER
     grid-auto-columns: 40%;
     padding: 0;
     overflow-x: auto;
+    overflow-y: hidden;
     overscroll-behavior-inline: contain;
 }
 
