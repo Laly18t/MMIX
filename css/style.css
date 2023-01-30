@@ -643,7 +643,7 @@ PARTIE 2 : SPEAKER
 }
 
 .speaker-element>img {
-    background: linear-gradient(45deg, #ff00CC, #333399);
+    /* background: linear-gradient(45deg, #ff00CC, #333399); */
     padding: 5px;
     inline-size: 70%;
     object-fit: cover;
